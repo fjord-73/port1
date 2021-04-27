@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'django_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'my_database',
-        'USER': 'root',
-        'PASSWORD':'kt72rsbh',
-        'HOST': '127.0.0.1',
-        'PORT':'3306',
+        'NAME': 'fjord$DatabaseSample',
+        'USER': 'fjord',
+        'PASSWORD':'kt73rsbh',
+        'HOST': 'fjord.mysql.pythonanywhere-services.com',
+        'PORT':'',
 
     }
 }
