@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'fjord.pythonanywhere.com']
 
 SECRET_KEY = 'qvk)^$23p9%*@mq@m$=x630)s#h1+g8v6^)%$otg+393m*!37-'
 # Application definition
@@ -141,3 +141,6 @@ LOGIN_REDIRECT_URL = '/login_ok'
 LOGOUT_REDIRECT_URL='/port1'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
