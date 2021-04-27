@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="itf-8">
+    
+    <title>データベース管理</title>
+    
+    <link rel="stylesheet" href="{% static 'port1/css/style.css' %}" />
+    <body class="back">
+        <h1 class="data_title">{{title}}</h1>
+        <h3>{{msg}}</h3>
+        <div class="section">
+            <p>他のフレームワークと同じようにDjangoも、データベースの機能を使用することが出来る。このページでは実際に作成したデータベースを利用できると共に軽い紹介、使うことのメリット、使用例などを記載している。</p>
+            <p>ログやデータ管理などの処理はテキストファイルに保存するとアクセスに膨大な時間がかかり、複数のユーザーがアクセスできない。そのため膨大なデータも迅速に処理ができ大勢が利用可能なデータ保管に特化したプログラム、データベースの出番だ。
+                データベースは様々なものがあるがDjangoではMySQL,PostgreSQL,SQLiteの三種類が利用できる。このページではMySQlを使用している。データの修正なども下の検索、登録フォームのようにDjangoの管理ツールで対応できる
+                この機能を応用すればデータ、表の保存だけでなくSNSのようなユーザーごとのメッセージのやり取りも可能になる。</p>
+            </div>
+        <div class="png1">
+            <img src="{% static 'admin.png' %}">
+            <p>管理ツールの画面。ここで簡単に編集が出来る</p>
+        </div>
+        <div class="png2">
+            <img src="{% static 'setting.png' %}">
+            <p>データベースの設定画面。ここで編集してどのデータベースを利用するか決める</p>
+        </div>
+        
+        <form action="{% url 'creates' %}" method="POST">
+        <div class="add_form">
+            <p>{{message|safe}}  ※dayは2021-1-27のように入力してください</p>
+            {% csrf_token %}
+            
+            {{form_add}}
+            
+            <input  class="add" type="submit" value="add">
+            
+        </div>
+        </form>       
+        <form action="{% url 'database' %}" method="POST">
+        <div class="form_search">
+            <p>{{message1|safe}}</p>
+            {% csrf_token %}
+            {{form}}
+        
+            <input class="search" type="submit" value="click">
+        </div>
+        </form>
+        
+        <div class="column">
+            <h2 class="colum">id</h2>
+            <h2 class="colum">comment</h2>
+            <h2 class="colum">check</h2>
+            <h2 class="colum">day</h2>
+        </div>
+        <div class="sheet">
+        {% for item in data %}
+            <h4 class="sheets">{{item.id}}</h4>
+            
+            <h4 class="sheets">{{item.name}}</h4>
+            
+            <h4 class="sheets">
+                {% if item.gender == False %}
+                no
+                {% else %}
+                yes
+                {% endif %}
+            </h4>
+            
+            
+            <h4 class="sheets">{{item.birthday}}</h4>
+            <br class="sheets">
+        {% endfor %}
+        </div>
+            
+        
+        
+        <a href="{% url 'sample' %}"><h3>TOP page</h3></a>
+
+    </body>
+
+
+
+</head>
+</html>

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="itf-8">
+    <link rel="stylesheet" href="{% static 'port1/css/style.css' %}" />
+    <title>リンク</title>
+    
+    <body>
+        <div>
+            <h2 class="error_h2">※　エラー！　※</h2>
+            <p class="error_p">入力した数値が間違っております。</p>
+            <a href="{% url 'database' %}"><p class="error_p">戻る</p></a>
+            
+            
+        </div>
+
+    </body>
+
+
+
+</head>
+</html>

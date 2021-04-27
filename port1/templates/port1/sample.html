@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html> 
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    {% csrf_token %}
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'port1/css/style.css' %}" />
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'head.png' %}">
+    </div>
+    <div class="cont1">
+        <a href="{% url 'introduction' %}"><img src="{% static 'sicon.png' %}"></a>
+        <a href="{% url 'introduction' %}"><h3>Introduction</h3></a>
+        <p>{{msg1}}</p>
+        <br>
+        <br>
+        <a href="{% url 'merit' %}"><img src="{% static 'dj.png' %}"></a>
+        <a href="{% url 'merit' %}"><h3>Merit</h3></a>
+        <p>{{msg2}}</p>
+        <br>
+        <br>
+        <a href="{% url 'link' %}"><img src="{% static 'link.png' %}"></a>
+        <a href="{% url 'link' %}"><h3>Link</h3></a>
+        <p>{{msg5}}</p>
+
+    </div>
+    <div class="cont2">
+        <a href="{% url 'database' %}"><img src="{% static 'db.png' %}"></a>
+        <a href="{% url 'database' %}"><h3>DB</h3></a>
+        <p>{{msg3}}</p>
+        <br>
+        <br>
+        <a href="{% url 'login' %}"><img src="{% static 'login.png' %}"></a>
+        <a href="{% url 'login' %}"><h3>Login</h3></a>
+        <p>{{msg4}}</p>
+        <br>
+        <br>
+        <a href="{% url 'form' %}"><img src="{% static 'form.png' %}"></a>
+        <a href="{% url 'form' %}"><h3>Form</h3></a>
+        <p>{{msg6}}</p>
+    </div>
+    
+</body>
+</html>

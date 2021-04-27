@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import port1.views as port1
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('proto/', include('proto.urls')),
-    path('port1/', port1.sample),
-
-]
+    path('port1/', include('port1.urls')),
+    path('', include('port1.urls')),
+    ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

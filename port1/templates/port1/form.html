@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="itf-8">
+    
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'port1/css/style.css' %}" />
+    <body>
+        
+        <h1 class="form_area">{{msg|safe}}</h1>
+        
+        <form action="{% url 'form' %}" method="POST">
+            {% csrf_token %}
+            {% for form_a in form %}
+            <div class="form_a">
+                {{ form_a.errors }}
+                {{ form_a.label_tag }}
+                {{ form_a }}
+                <p class="help">{{ form_a.help_text }}</p>
+            </div>
+            {% endfor %}
+            <input class="form_b" type="submit" value="click">
+        </form>
+        <a class="form_area" href="{% url 'sample' %}"><p>TOP</p></a>
+
+    </body>
+
+
+
+</head>
+</html>

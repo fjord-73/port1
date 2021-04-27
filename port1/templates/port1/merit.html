@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="itf-8">
+    {% csrf_token %}
+    <title>メリット</title>
+    <link rel="stylesheet" href="{% static 'port1/css/style.css' %}" />
+    <body>
+        <div>
+            <h2 class="merit_title">Djangoを扱うことのメリット</h2>
+            <ul>
+                <div class="merit_txt">  
+                    <li>管理がしやすい</li>
+                    <p>イントロダクションのページでも書いたようにMVCによって分かれており
+                        メンテナンスが容易に出来るようになっております。
+                        また作成したモジュール(処理の部品)は再利用可能です。
+                    </p>
+                    <li>フルスタック(多機能)である</li>
+                    <p>
+                        他のページで紹介しているデータベースの処理やフォームなどの機能が予め備わっており
+                        モジュールをインポートして最低でもHTML含めて9行程度で実装できます。
+                        <a href="https://docs.djangoproject.com/ja/3.2/">公式のドキュメントはこちら</a>
+                    </p>                                
+                    <li>セキュリティ</li>
+                    <p>
+                        djangoで受け取った情報やログイン用のユーザーなどはMySQLやSQliteなどで処理されて
+                        保存されます。admin(管理画面)でも確認しましたがユーザーのパスワードなどはハッシュ化
+                        (暗号化)されており安全です。クロスサイトリクエストフォージェリ(CSRF)、SQLインジェクション
+                        に対する対策もdjangoには備わっております。
+                    </p>                              
+                    <li>チェックが容易</li>
+                    <p>
+                        djangoはサーバーにファイルをアップロードしていちいち動作の確認せずに済むように
+                        自分のPCでサーバーを立ち上げて他のアプリを介さず即座に確認出来るようになっております。
+                    </p>
+                </div>
+                <div class="merit_img">
+                    <img class="merita" src="{% static 'mvc.png' %}">
+                    <img class="meritb" src="{% static 'doc.png' %}">
+                    <img class="meritc" src="{% static 'secu.png' %}">
+                    <img class="meritd" src="{% static 'local.png' %}">
+                </div>
+            </ul>
+        </div>
+
+    </body>
+
+
+
+</head>
+</html>

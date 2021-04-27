@@ -22,17 +22,7 @@ def index(request, num=1):
     return render(request, 'proto/index.html', params)
 
 def create(request):
-
-    if (request.method == 'POST'):
-        obj = Rank()
-        rank = HelloForm(request.POST, instance=obj)
-        rank.save()
-        return redirect(to='/proto')
-    params = {
-        'title':'真壁瑞希',
-        'form': HelloForm(),
-    }
-    return render(request, 'proto/create.html', params)
+    return render(request, 'proto/index.html',)
 
 def edit(request, num):
     obj= Rank.objects.get(id=num)

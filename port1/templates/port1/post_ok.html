@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="itf-8">
+    {% csrf_token %}
+    <title>送信完了</title>
+    <link rel="stylesheet" href="{% static 'port1/css/style.css' %}" />
+    <body>
+        <div class="order_ok">
+            <h2>送信完了</h2>
+            <P>入力されたメールアドレスに折り返し連絡させて頂きます。しばらくお待ちください。</P>
+        
+            <a href="{% url 'sample' %}"><p>TOP</p></a>
+        </div>
+
+    </body>
+
+
+
+</head>
+</html>

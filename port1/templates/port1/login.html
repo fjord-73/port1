@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="itf-8">
+    
+    <title>ログイン画面</title>
+    <link rel="stylesheet" href="{% static 'port1/css/style.css' %}" />
+    <body>
+        <div class="Login">
+            <h2>Login</h2>   
+            
+        </div>
+        <div class="login_form">
+            <b>ログイン</b>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group has-feedback">
+                    {{ field }}
+                  </div>
+                {% endfor %}
+                <div class="row">
+                
+                {% for error in form.non_field_errors %}
+                  <div class="alert alert-danger" role="alert">
+                    <p>{{ error }}</p>
+                  </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary btn-block btn-flat">ログオン</button>
+              </div>
+                <div class=exsample>
+                  <p>ユーザー名:test_login</p>
+                  <p>パスワード:port1login</p>
+                </div>
+                <p class="exsample2">←これでログインできます。試してみてください</p>      
+            </form>
+            
+        </div>
+        <a href="{% url 'sample' %}"><p class="login_top">TOP</p></a>
+    </body>
+
+
+
+</head>
+</html>

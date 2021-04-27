@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="itf-8">
+    <link rel="stylesheet" href="{% static 'port1/css/style.css' %}" />
+    <title>リンク</title>
+    
+    <body>
+        <div>
+            <h2>リンク</h2>
+            {% for file in file_obj %}
+
+                <p><a href="{{ file.urls }}">{{ file.name }}</a></p>
+                
+            {% endfor %}
+            
+            
+        </div>
+
+    </body>
+
+
+
+</head>
+</html>
