@@ -1,0 +1,173 @@
+.header{
+    text-align: center;
+    max-width: 100%;
+}
+.cont1{
+    float: left;
+    padding: 250px 200px 250px 200px;
+    text-align: center;
+}
+.cont2{
+    float: left;
+    padding: 250px 200px 250px 200px;
+    text-align: center;
+}
+.cont2 img:hover{
+    opacity: 50%;
+}
+.cont1 img:hover{
+    opacity: 50%;
+}
+.form_area{
+    text-align: center;
+    margin: auto;
+}
+.form_a{
+    margin: 20px auto;
+    text-align: center;
+}
+input{
+    width: 15%;
+}
+.form_b{
+    padding: auto;
+    margin: 0px 900px;
+    width: 100px;
+    height: 50px;
+}
+    
+
+.help{
+    color: darkgoldenrod;
+}
+.order_ok{
+    text-align: center;
+}
+.data_title{
+    text-align: center;
+    margin: auto;
+}
+.section{
+    text-align: auto;
+    padding: 5% 10%;
+    font-size: 20px;
+}
+.result{
+    float: left;
+    padding: auto;
+}
+.data_table h2{
+    text-align: center;
+    padding: 20%;
+    margin: auto;
+    float: left;
+}
+.png1,.png2{
+    float: left;
+    text-align: center;
+    padding: 11%;
+    margin: auto;
+}
+.add_form,.form_search{
+    float: left;
+    text-align: center;    
+    width: 50%;
+    font-size: 20px;
+    padding-bottom: 10%;
+}
+.column{
+    display: block;
+    text-align: center;
+    
+}
+.colum{
+    margin: auto;
+    float: left;
+    width: calc(100% / 4);
+}
+.sheets{
+    text-align: center;
+    margin:auto auto 20px auto;
+    float: left;
+    width: calc(100% / 4);   
+    border-bottom: solid 1px;
+}
+.sheet{  
+    text-align: center;  
+}
+.exsample{
+    float: left;
+    width: calc(100% / 2);
+    text-align: right;
+}
+.exsample2{
+    text-align: left;
+    float: left;
+    width: calc(100% / 2)-2;
+    margin: 2% 28% 3% 2%;
+    
+}
+.Login,.login_form{
+    text-align: center;
+}
+.error_h2{
+    text-align: center;
+    color: yellowgreen;
+    font-size: 35px;
+}
+.error_p{
+    text-align: center;
+    font-size: 25px;
+}
+.merit_title{
+    font-size: 40px;
+}
+.merit_txt{
+    float: left;
+    width: calc(100% / 2);
+}
+.merit_txt li{
+    font-size: 30px;
+    padding: 5% 0%;
+}
+.merit_txt p{
+    font-size: 20px;
+    padding-bottom: 15%;
+}
+.merit_img{
+    width: 50%;
+    float: left;
+}
+.merita,.meritb,.meritc,.meritd{
+    padding: 7% 0% 6% 7%;
+    margin-right: 50%;
+}
+.intro_title{
+    text-align: center;
+    font-size: 40px;
+}
+.intro_sub{
+    text-align: center;
+    font-size: 35px;
+}
+.intro_body p{
+    text-align: center;
+    padding: 0% 15% 5% 15%;
+    font-size: 20px;
+}
+.intro_sub2{
+    font-size: 35px;
+    float: left;
+    text-align: center;
+    margin-left: 35%;
+}
+.status{
+    float: left;
+    text-align: center;
+    margin-right: 20%;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+.login_top{
+    text-align: center;
+}
