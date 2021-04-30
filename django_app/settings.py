@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'django_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'fjord$DatabaseSample',
-        'USER': 'fjord',
-        'PASSWORD':'kt73rsbh',
-        'HOST': 'fjord.mysql.pythonanywhere-services.com',
+        'NAME': 'fake',
+        'USER': 'fake',
+        'PASSWORD':'fake',
+        'HOST': 'fake404',
         'PORT':'',
 
     }
@@ -133,10 +133,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'kimura443number@gmail.com' 
+DEFAULT_FROM_EMAIL = '0120-1079-29' 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kimura443number@gmail.com'
-EMAIL_HOST_PASSWORD = 'qcqufnysingssygq'
+EMAIL_HOST_USER = '0120-00-2222'
+EMAIL_HOST_PASSWORD = 'fake'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
