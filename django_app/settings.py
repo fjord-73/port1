@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from django.core.management.utils import get_random_secret_key
+SECRET_KEY = get_random_secret_key()  
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 import pymysql
@@ -27,7 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'fjord.pythonanywhere.com']
 
-SECRET_KEY = 'qvk)^$23p9%*@mq@m$=x630)s#h1+g8v6^)%$otg+393m*!37-'
+
 # Application definition
 
 INSTALLED_APPS = [

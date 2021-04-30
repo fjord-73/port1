@@ -14,7 +14,7 @@ from django.contrib.auth.views import(LoginView, LogoutView)
 
 def sample(request):
     params = {
-        'title':'真壁瑞希',
+        'title':'TOPページ',
         'msg1':'djangoを紹介しつつ、このサイトを作った際の開発環境を載せております',
         'msg2':'このページではdjangoを利用するメリットをわかりやすく解説しております',
         'msg3':'djangoの機能の一つであるデータベースのサンプルを載せております。',
@@ -31,7 +31,7 @@ def form(request):
     
     
     params = {
-        'title':'真壁瑞希',
+        'title':'フォーム',
         'msg':'お問い合わせ用フォーム',
         'sample':'sample',
         'form':ConectForm(),        
